@@ -1,0 +1,9 @@
+Reading config file C:\Users\cleit\Desktop\GamesRetro\emuladores\SNES9x/snes9x.conf.
+Saving	config file	C:\Users\cleit\Desktop\GamesRetro\emuladores\SNES9x/snes9x.conf
+Sound buffer size: 8192 (2048 samples)
+Found ROM file header (and ignored it).
+Map_LoROMMap
+"" [bad checksum] LoROM, Corrupt, ROM, NTSC, SRAM:Corrupt, ID:AWJP, CRC32:65545E88
+Sound buffer size: 8192 (2048 samples)
+Saving	config file	C:\Users\cleit\Desktop\GamesRetro\emuladores\SNES9x/snes9x.conf
+Saving	config file	C:\Users\cleit\Desktop\GamesRetro\emuladores\SNES9x/snes9x.conf

@@ -1,0 +1,75 @@
+{% block Titulo %}<title>GamesRetro</title>{% endblock %}
+{% load staticfiles %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+    <!--<link href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet"/>-->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <meta charset='UTF-8'>
+    <style>img{width:91px;height:130px;margin: 0 auto;}</style>
+    <title>GamesRetro</title>
+</head>
+    <body>
+    {% block conteudo %}
+    <div class='container'>
+        <br /><br />
+        <h2 class='text-center'></h2>
+        <h4 class='text-center'>GamesRetro</h4>
+        <p class='text-center'>Projeto mantido no github: <a href='https://github.com/CleitonLC/GamesRetro' target='_blank'>https://github.com/CleitonLC/GamesRetro</a></p><p class='text-center'></p>
+        <span class='badge badge-danger'></span>
+        <table class='table table-striped'>
+            <div class='thead-dark'>
+                <div class="page-block accent homepage">
+                    <div class="container text-center">
+                        <h1>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Jogue jogos retro </font>
+                            </font>
+                            <br>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                            no seu PC, Mac ou dispositivos Android</font>
+                            </font>
+                        </h1>
+                        <p class="sub-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">O GamesRetro fornece uma maneira simples e intuitiva de jogar games retro que fizeram parte de sua infância,com um toque de amor &lt;3</font></font></p>
+
+                        <div class="row">
+                            {% for item in response %}
+                            <div class="col-lg-6 col-sm-6 col-sm-6 col-xs-6">
+                                <!--<ul>
+                                    {% for item in response %}
+                                    <li>
+                                        <a href="{{ item.url_rom }}" title="{{ item.name_rom }}">
+                                            <img class="media-object" src=" {{ item.img_rom }} " alt=" {{ item.name_rom }} " width="165" height="102">
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>-->
+                                <p style='background: blue;'>
+
+                                    <li>
+                                        <div style=""><i class="fa fa-exclamation-triangle fa-2x"></i></div>
+                                        <!--<a href="//www.loveroms.com/{{item.url_rom}} " ng_click="{% verbatim %} {% endverbatim %}" title="{{item.name_rom}}">-->
+                                            <a href="/roms/open_roms/?url={{item.url_rom}}&change_console={{item.change_console}}" ng_click="{% verbatim %} {% endverbatim %}" title="{{item.name_rom}}">
+                                            <img class="media-object" src=" {{ item.img_rom }} " alt=" {{ item.name_rom }} " width="165" height="102"></a>
+                                        <br>
+                                        <span>{{item.name_rom}}</span>
+                                    </li>
+
+                                </p>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </table>
+    </div>
+    {% endblock %}
+{% endblock content %}
+</body>
+</html>
